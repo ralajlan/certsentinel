@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certsentinel"
+version = "0.1.0"
+description = "Dependency-free HTTPS certificate expiry checker for scripts and monitoring"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "CertSentinel contributors"}]
+keywords = ["tls", "ssl", "certificate", "expiry", "monitoring"]
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent"]
+
+[project.scripts]
+certsentinel = "certsentinel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["certsentinel*"]
